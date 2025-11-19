@@ -2,6 +2,26 @@
 
 This project is a comprehensive demonstration of a secure Spring Boot application that leverages Spring Security to provide robust authentication and authorization. It includes both traditional JWT-based authentication and social login with OAuth2 providers like Google and GitHub. The application is also fully instrumented for observability with the ELK stack for logging and Prometheus/Grafana for metrics monitoring.
 
+## Table of Contents
+
+- [Features](#features)
+- [Architecture](#architecture)
+- [Technologies Used](#technologies-used)
+- [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
+  - [Local Setup](#local-setup)
+  - [Running with Docker](#running-with-docker)
+- [API Endpoints](#api-endpoints)
+- [Configuration](#configuration)
+  - [Application Properties](#application-properties)
+  - [OAuth2 Configuration](#oauth2-configuration)
+- [Observability](#observability)
+  - [ELK Stack](#elk-stack)
+  - [Prometheus and Grafana](#prometheus-and-grafana)
+- [Testing](#testing)
+- [Contributing](#contributing)
+- [License](#license)
+
 ## Features
 
 - **Authentication:**
@@ -27,6 +47,17 @@ The application follows a standard layered architecture:
 - **Service Layer:** Contains the business logic for user management, authentication, and other operations.
 - **Repository Layer:** Handles data access and persistence using Spring Data JPA.
 - **Security Layer:** Implements the security configuration, including JWT and OAuth2 support, using Spring Security.
+
+## Technologies Used
+
+- **Framework:** Spring Boot 3
+- **Language:** Java 21
+- **Security:** Spring Security, JWT, OAuth2
+- **Database:** H2 (for testing), PostgreSQL (for production)
+- **API Documentation:** SpringDoc (Swagger/OpenAPI)
+- **Logging:** Logstash, Elasticsearch, Kibana (ELK Stack)
+- **Metrics:** Prometheus, Grafana
+- **Build Tool:** Maven
 
 ## Prerequisites
 
@@ -150,3 +181,11 @@ To run the tests:
 ```
 
 The tests are configured to run with the `test` profile, which uses an in-memory H2 database.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a pull request.
+
+## License
+
+This project is licensed under the MIT License.
